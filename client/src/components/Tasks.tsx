@@ -5,8 +5,9 @@ export default function Tasks() {
   const tasksToHTML = () => {
     const rows = tasks.map((result, index) => (
       <div key={index}>
-        <img src={`/client/src/assets/images/${result.image}`}></img>
-        {result.name}
+        <img src={`./${result.image}`}></img>
+        <div>{result.name}</div>
+        <div>Mesos: {result.mesos}</div>
       </div>
     ));
 
