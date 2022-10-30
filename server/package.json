@@ -19,6 +19,7 @@
     "@types/validator": "^13.6.3",
     "cors": "^2.8.5",
     "express": "^4.17.1",
+    "react-express-ts": "file:..",
     "sequelize": "^6.6.5",
     "sqlite3": "^5.0.2",
     "tscpaths": "^0.0.9",

@@ -1,6 +1,7 @@
 import React, { FormEvent, useState } from "react";
 import Leaderboard from "../components/Leaderboard";
 import Navbar from "../components/Navbar";
+import Tasks from "../components/Tasks";
 import Tos from "../components/Tos";
 
 export default function App() {
@@ -37,7 +38,7 @@ export default function App() {
       <Navbar />
       <section className="section">
         <div className="columns is-centered">
-          <div className="column is-half">{showTos()}</div>
+          <div className="column is-half">{<Tasks></Tasks>}</div>
         </div>
       </section>
     </div>
