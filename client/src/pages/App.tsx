@@ -1,6 +1,6 @@
 import React from "react";
 import Navbar from "../components/Navbar";
-import Tasks from "../components/Tasks";
+import Dashboard from "../components/Dashboard";
 
 export default function App() {
   return (
@@ -9,8 +9,7 @@ export default function App() {
       <section className="section">
         <div className="columns is-centered">
           <div className="column is-half">
-            <Tasks json="./Daily Bosses.json" header="Dailies" />
-            <Tasks json="./Weekly Bosses.json" header="Weeklies"/>
+            <Dashboard></Dashboard>
           </div>
         </div>
       </section>
