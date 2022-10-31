@@ -23,30 +23,5 @@
         "name": "von leon",
         "image": "vonleon.webp",
         "mesos": 5000
-    },
-    {
-        "name": "lotus",
-        "image": "lotus.webp",
-        "mesos": 10000
-    },
-    {
-        "name": "damien",
-        "image": "damien.png",
-        "mesos": 20000
-    },
-    {
-        "name": "slime",
-        "image": "slime.webp",
-        "mesos": 30000
-    },
-    {
-        "name": "lucid",
-        "image": "lucid.jpg",
-        "mesos": 40000
-    },
-    {
-        "name": "will",
-        "image": "will.jpg",
-        "mesos": 50000
     }
 ]
