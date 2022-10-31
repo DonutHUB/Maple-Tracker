@@ -1,0 +1,52 @@
+[
+    {
+        "name": "pink bean",
+        "image": "pink_bean.png",
+        "mesos": 1000
+    },
+    {
+        "name": "magnus",
+        "image": "magnus.jpg",
+        "mesos": 2000
+    },
+    {
+        "name": "pap",
+        "image": "pap.webp",
+        "mesos": 3000
+    },
+    {
+        "name": "ranmaru",
+        "image": "ranmaru.webp",
+        "mesos": 4000
+    },
+    {
+        "name": "von leon",
+        "image": "vonleon.webp",
+        "mesos": 5000
+    },
+    {
+        "name": "lotus",
+        "image": "lotus.webp",
+        "mesos": 10000
+    },
+    {
+        "name": "damien",
+        "image": "damien.png",
+        "mesos": 20000
+    },
+    {
+        "name": "slime",
+        "image": "slime.webp",
+        "mesos": 30000
+    },
+    {
+        "name": "lucid",
+        "image": "lucid.jpg",
+        "mesos": 40000
+    },
+    {
+        "name": "will",
+        "image": "will.jpg",
+        "mesos": 50000
+    }
+]
