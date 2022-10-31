@@ -4,6 +4,7 @@ export default function Tasks(props: {
   json: string;
   header: string;
   setMesos: any;
+  mesos: number;
 }) {
   const [info, setInfo] =
     useState<{ name: string; mesos: string; image: string }[]>();
@@ -17,9 +18,22 @@ export default function Tasks(props: {
     fetchData();
   }, [info]);
 
-  const checkboxClicked = (event: { target: { checked: any; id: any } }) => {
-    console.log(event.target.checked, event.target.id);
-    props.setMesos(1);
+  const checkboxClicked = (event: {
+    target: {
+      getAttribute: any;
+      checked: boolean;
+      id: any;
+    };
+  }) => {
+    if (event.target.checked) {
+      props.setMesos(
+        props.mesos + Number(event.target.getAttribute("data-mesos"))
+      );
+    } else {
+      props.setMesos(
+        props.mesos - Number(event.target.getAttribute("data-mesos"))
+      );
+    }
   };
 
   const dailyBossesToHTML = () => {
@@ -35,7 +49,11 @@ export default function Tasks(props: {
         <div key={index}>
           <div className="columns">
             <div className="column has-text-centered">
-              <input type={"checkbox"} onChange={checkboxClicked} />
+              <input
+                type={"checkbox"}
+                onChange={checkboxClicked}
+                data-mesos={result.mesos}
+              />
               <img src={`./${result.image}`} style={{ height: "100px" }}></img>
             </div>
             <div className="column has-text-centered">
