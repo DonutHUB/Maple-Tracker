@@ -1,14 +1,14 @@
 import React, { useEffect, useState } from "react";
 
-export default function Tasks() {
+export default function Tasks(props: {json: string, header: string}) {
   const [info, setInfo] =
     useState<{ name: string; mesos: string; image: string }[]>();
 
   useEffect(() => {
     const fetchData = async () => {
-      const file = await fetch("./Daily Bosses.json");
-      const daily_bosses = await file.json();
-      setInfo(daily_bosses);
+      const file = await fetch(props.json);
+      const json_file = await file.json();
+      setInfo(json_file);
     };
     fetchData();
   }, [info]);
@@ -44,7 +44,7 @@ export default function Tasks() {
   return (
     <div className="content has-text-centered">
       <div className="block">
-        <h4>Dailies</h4>
+        <h1>{props.header}</h1>
         {dailyBossesToHTML()}
       </div>
     </div>

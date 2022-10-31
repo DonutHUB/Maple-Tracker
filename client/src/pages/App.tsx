@@ -9,8 +9,8 @@ export default function App() {
       <section className="section">
         <div className="columns is-centered">
           <div className="column is-half">
-            <Tasks  />
-            {/* <Tasks json="./Weekly Bosses.json" /> */}
+            <Tasks json="./Daily Bosses.json" header="Dailies" />
+            <Tasks json="./Weekly Bosses.json" header="Weeklies"/>
           </div>
         </div>
       </section>
