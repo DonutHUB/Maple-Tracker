@@ -13,7 +13,7 @@ export default function Navbar() {
           onClick={() => setNavbarBurgerToggled(!navbarBurgerToggled)}
         >
           <img src={logo} className="app-logo" alt="logo" />
-          <h1 className="is-size-5">React App</h1>
+          <h1 className="is-size-5">Maple Tracker</h1>
         </a>
         <a
           className="navbar-burger burger"

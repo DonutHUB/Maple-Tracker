@@ -36,7 +36,7 @@ export default function Tasks(props: {
     }
   };
 
-  const dailyBossesToHTML = () => {
+  const bosses = () => {
     const rows = info?.map(
       (
         result: {
@@ -49,16 +49,16 @@ export default function Tasks(props: {
         <div key={index}>
           <div className="columns">
             <div className="column has-text-centered">
-              <input
-                type={"checkbox"}
-                onChange={checkboxClicked}
-                data-mesos={result.mesos}
-              />
               <img src={`./${result.image}`} style={{ height: "100px" }}></img>
             </div>
             <div className="column has-text-centered">
               <div>{result.name}</div>
               <div>Mesos: {result.mesos}</div>
+              <input
+                type={"checkbox"}
+                onChange={checkboxClicked}
+                data-mesos={result.mesos}
+              />
             </div>
           </div>
         </div>
@@ -72,7 +72,7 @@ export default function Tasks(props: {
     <div className="content has-text-centered">
       <div className="block">
         <h1>{props.header}</h1>
-        {dailyBossesToHTML()}
+        {bosses()}
       </div>
     </div>
   );

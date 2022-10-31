@@ -7,18 +7,24 @@ export default function Dashboard() {
 
   return (
     <div className="content">
+      <div className="columns">
+      <div className="column">
       <Tasks
         json="./Daily Bosses.json"
         header="Dailies"
         setMesos={setDailies}
         mesos={dailies}
       ></Tasks>
+      </div>
+      <div className="column">
       <Tasks
         json="./Weekly Bosses.json"
         header="Weeklies"
         setMesos={setWeeklies}
         mesos={weeklies}
       ></Tasks>
+      </div>
+      </div>
       <div>Dailies: {7*dailies}</div>
       <div>Weeklies: {weeklies}</div>
       <div>Total: {7*dailies + weeklies}</div>
