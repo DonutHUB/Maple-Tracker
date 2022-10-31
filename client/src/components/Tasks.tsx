@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from "react";
 
 export default function Tasks() {
-  const [info, setInfo] = useState<{ name: any; mesos: any; image: any }[]>();
+  const [info, setInfo] =
+    useState<{ name: string; mesos: string; image: string }[]>();
 
   useEffect(() => {
     const fetchData = async () => {
@@ -13,30 +14,14 @@ export default function Tasks() {
   }, [info]);
 
   const dailyBossesToHTML = () => {
-    if (!info) return "";
     const rows = info?.map(
       (
         result: {
-          image: any;
-          name:
-            | boolean
-            | React.ReactChild
-            | React.ReactFragment
-            | React.ReactPortal
-            | null
-            | undefined;
-          mesos:
-            | string
-            | number
-            | boolean
-            | {}
-            | React.ReactElement<any, string | React.JSXElementConstructor<any>>
-            | React.ReactNodeArray
-            | React.ReactPortal
-            | null
-            | undefined;
+          image: string;
+          name: string;
+          mesos: string;
         },
-        index: React.Key | null | undefined
+        index: React.Key
       ) => (
         <div key={index}>
           <div className="columns">
