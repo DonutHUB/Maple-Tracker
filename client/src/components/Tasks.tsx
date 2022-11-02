@@ -53,7 +53,7 @@ export default function Tasks(props: {
             </div>
             <div className="column has-text-centered">
               <div>{result.name}</div>
-              <div>Mesos: {result.mesos}</div>
+              <div>Level: {result.mesos}</div>
               <input
                 type={"checkbox"}
                 onChange={checkboxClicked}
