@@ -28,7 +28,14 @@ export default function Tasks(props: {
           mesos: string;
         },
         index: React.Key
-      ) => <Task info={result} key={index}></Task>
+      ) => (
+        <Task
+          info={result}
+          setMesos={props.setMesos}
+          mesos={props.mesos}
+          key={index}
+        ></Task>
+      )
     );
 
     return rows;

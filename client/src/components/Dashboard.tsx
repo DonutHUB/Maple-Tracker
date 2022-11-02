@@ -27,9 +27,9 @@ export default function Dashboard() {
           </div>
         </div>
       </div>
-      <div>Dailies: {7 * dailies}</div>
+      <div>Dailies: {dailies}</div>
       <div>Weeklies: {weeklies}</div>
-      <div>Weekly Income: {7 * dailies + weeklies}</div>
+      <div>Weekly Income: {dailies + weeklies}</div>
     </div>
   );
 }

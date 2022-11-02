@@ -6,7 +6,17 @@ export default function Task(props: {
     name: string;
     mesos: string;
   };
+  setMesos: any;
+  mesos: number;
 }) {
+  const increment = () => {
+    props.setMesos(props.mesos + Number(props.info.mesos));
+  };
+
+  const decrement = () => {
+    props.setMesos(props.mesos - Number(props.info.mesos));
+  };
+
   return (
     <div className="columns">
       <div className="column has-text-centered">
@@ -14,8 +24,9 @@ export default function Task(props: {
       </div>
       <div className="column has-text-centered">
         <div>{props.info.name}</div>
-        <div>Level: {props.info.mesos}</div>
-        <input type={"checkbox"} data-mesos={props.info.mesos} />
+        <div>{props.info.mesos}</div>
+        <button onClick={decrement}>-</button>
+        <button onClick={increment}>+</button>
       </div>
     </div>
   );
