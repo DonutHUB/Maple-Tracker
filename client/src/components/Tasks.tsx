@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import Task from "./Task";
 
 export default function Tasks(props: {
   json: string;
@@ -18,24 +19,6 @@ export default function Tasks(props: {
     fetchData();
   }, [info]);
 
-  const checkboxClicked = (event: {
-    target: {
-      getAttribute: any;
-      checked: boolean;
-      id: any;
-    };
-  }) => {
-    if (event.target.checked) {
-      props.setMesos(
-        props.mesos + Number(event.target.getAttribute("data-mesos"))
-      );
-    } else {
-      props.setMesos(
-        props.mesos - Number(event.target.getAttribute("data-mesos"))
-      );
-    }
-  };
-
   const bosses = () => {
     const rows = info?.map(
       (
@@ -45,24 +28,7 @@ export default function Tasks(props: {
           mesos: string;
         },
         index: React.Key
-      ) => (
-        <div key={index}>
-          <div className="columns">
-            <div className="column has-text-centered">
-              <img src={`./${result.image}`} style={{ height: "100px" }}></img>
-            </div>
-            <div className="column has-text-centered">
-              <div>{result.name}</div>
-              <div>Level: {result.mesos}</div>
-              <input
-                type={"checkbox"}
-                onChange={checkboxClicked}
-                data-mesos={result.mesos}
-              />
-            </div>
-          </div>
-        </div>
-      )
+      ) => <Task info={result} key={index}></Task>
     );
 
     return rows;
