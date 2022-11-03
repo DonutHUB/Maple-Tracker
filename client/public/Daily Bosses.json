@@ -1,27 +1,32 @@
 [
     {
-        "name": "pink bean",
+        "name": "Normal Pink Bean",
         "image": "pink_bean.png",
-        "mesos": 1000
+        "mesos": 4213500,
+        "max_runs": 7
     },
     {
-        "name": "magnus",
+        "name": "Normal Magnus",
         "image": "magnus.jpg",
-        "mesos": 2000
+        "mesos": 7776000,
+        "max_runs": 7
     },
     {
-        "name": "pap",
+        "name": "Normal Papulatus",
         "image": "pap.webp",
-        "mesos": 3000
+        "mesos": 7993500,
+        "max_runs": 7
     },
     {
-        "name": "ranmaru",
+        "name": "Hard Ranmaru",
         "image": "ranmaru.webp",
-        "mesos": 4000
+        "mesos": 7993500,
+        "max_runs": 7
     },
     {
-        "name": "von leon",
+        "name": "Hard Von Leon",
         "image": "vonleon.webp",
-        "mesos": 5000
+        "mesos": 7350000,
+        "max_runs": 7
     }
 ]

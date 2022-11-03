@@ -1,27 +1,32 @@
 [
     {
-        "name": "lotus",
+        "name": "Normal Lotus",
         "image": "lotus.webp",
-        "mesos": 10000
+        "mesos": 97537500,
+        "max_runs": 1
     },
     {
-        "name": "damien",
+        "name": "Normal Damien",
         "image": "damien.png",
-        "mesos": 20000
+        "mesos": 101400000,
+        "max_runs": 1
     },
     {
-        "name": "slime",
+        "name": " Normal Guardian Angel Slime",
         "image": "slime.webp",
-        "mesos": 30000
+        "mesos": 142496100,
+        "max_runs": 1
     },
     {
-        "name": "lucid",
+        "name": "Normal Lucid",
         "image": "lucid.jpg",
-        "mesos": 40000
+        "mesos": 121837500,
+        "max_runs": 1
     },
     {
-        "name": "will",
+        "name": "Normal Will",
         "image": "will.jpg",
-        "mesos": 50000
+        "mesos": 139537500,
+        "max_runs": 1
     }
 ]

@@ -1,19 +1,19 @@
 import React, { useState } from "react";
-import logo from "../assets/images/logo.svg";
+import logo from "../assets/images/maplestory_nav_image.jpg";
 
 export default function Navbar() {
   const [navbarBurgerToggled, setNavbarBurgerToggled] = useState(false);
 
   return (
-    <nav className="navbar is-primary">
+    <nav className="navbar is-primary" style={{backgroundColor: "orange"}}>
       <div className="navbar-brand">
         <a
           href="/"
           className="navbar-item"
           onClick={() => setNavbarBurgerToggled(!navbarBurgerToggled)}
+          style={{justifyContent: "center"}}
         >
-          <img src={logo} className="app-logo" alt="logo" />
-          <h1 className="is-size-5">Maple Tracker</h1>
+          <h1 className="is-size-5" style={{color: "black"}}><img src={logo} alt="logo"/>  Maplestory Boss Calculator</h1>
         </a>
         <a
           className="navbar-burger burger"

@@ -8,7 +8,7 @@ export default function Tasks(props: {
   mesos: number;
 }) {
   const [info, setInfo] =
-    useState<{ name: string; mesos: string; image: string }[]>();
+    useState<{ name: string; mesos: string; image: string; max_runs: number }[]>();
 
   useEffect(() => {
     const fetchData = async () => {
@@ -26,15 +26,16 @@ export default function Tasks(props: {
           image: string;
           name: string;
           mesos: string;
+          max_runs: number
         },
         index: React.Key
       ) => (
-        <Task
+        <><Task
           info={result}
           setMesos={props.setMesos}
           mesos={props.mesos}
           key={index}
-        ></Task>
+        ></Task><div className="block"></div></>
       )
     );
 

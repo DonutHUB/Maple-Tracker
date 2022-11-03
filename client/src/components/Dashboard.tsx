@@ -27,9 +27,9 @@ export default function Dashboard() {
           </div>
         </div>
       </div>
-      <div>Dailies: {dailies}</div>
-      <div>Weeklies: {weeklies}</div>
-      <div>Weekly Income: {dailies + weeklies}</div>
+      <div>Dailies: {dailies.toLocaleString()}</div>
+      <div>Weeklies: {weeklies.toLocaleString()}</div>
+      <div>Weekly Income: {(dailies + weeklies).toLocaleString()}</div>
     </div>
   );
 }
