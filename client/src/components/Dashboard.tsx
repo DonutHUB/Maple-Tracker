@@ -8,7 +8,7 @@ export default function Dashboard() {
   return (
     <div className="content">
       <div className="content has-text-left">
-        <div className="columns">
+        <div className="columns is-variable is-8">
           <div className="column">
             <Tasks
               json="./Daily Bosses.json"

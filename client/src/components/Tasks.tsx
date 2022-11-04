@@ -4,11 +4,13 @@ import Task from "./Task";
 export default function Tasks(props: {
   json: string;
   header: string;
-  setMesos: any;
+  setMesos: React.Dispatch<React.SetStateAction<number>>;
   mesos: number;
 }) {
   const [info, setInfo] =
-    useState<{ name: string; mesos: string; image: string; max_runs: number }[]>();
+    useState<
+      { name: string; mesos: string; image: string; max_runs: number }[]
+    >();
 
   useEffect(() => {
     const fetchData = async () => {
@@ -26,16 +28,16 @@ export default function Tasks(props: {
           image: string;
           name: string;
           mesos: string;
-          max_runs: number
+          max_runs: number;
         },
         index: React.Key
       ) => (
-        <><Task
+        <Task
           info={result}
           setMesos={props.setMesos}
           mesos={props.mesos}
           key={index}
-        ></Task><div className="block"></div></>
+        ></Task>
       )
     );
 
@@ -44,7 +46,7 @@ export default function Tasks(props: {
 
   return (
     <div className="content has-text-centered">
-      <div className="block">
+      <div>
         <h1>{props.header}</h1>
         {bosses()}
       </div>
