@@ -31,10 +31,10 @@ export default function Task(props: {
   return (
     <div className="card mb-5">
       <header className="card-header">
-        <p className="card-header-title  is-justify-content-left my-auto">
+        <p className="card-header-title  is-justify-content-left my-2">
           {props.info.name}
         </p>
-        <p className="card-header-title is-justify-content-right my-auto">
+        <p className="card-header-title is-justify-content-right my-2">
           {Number(props.info.mesos).toLocaleString()}
           <img src={`./meso_bag.jpg`} className="ml-1 image is-24x24"></img>
         </p>
